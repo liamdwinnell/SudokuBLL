@@ -93,4 +93,21 @@ public class LatinSquareTest {
 		
 		assertFalse(lq.hasAllValues(arr1,arr2));
 	}
+	@Test
+	public void get_Column_Test1() {
+		
+	}
+	@Test
+	public void get_Column_Test2() {
+		
+	}
+	@Test
+	public void get_Row_Test1() {
+		
+	}
+	@Test
+	public void get_Row_Test2() {
+		
+	}
+	
 }

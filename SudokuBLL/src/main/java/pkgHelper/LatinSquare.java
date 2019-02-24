@@ -73,24 +73,52 @@ public class LatinSquare {
 	}
 	
 	public int[] getColumn(int val) {
-		int[] Column = new int[0];
+		int[][] LS = getLatinSquare();
+		int[] Column = new int[LS.length];
+		
+		for(int i = 0; i < Column.length; i++) {
+			Column[i] = LatinSquare[i][val];
+		}
+		
 		return Column;
 	}
 	public int[] getRow(int val) {
-		int[] Row = new int[0];
+		int[][] LS = getLatinSquare();
+		int[] Row = new int[LS[val].length];
+		
+		for(int i = 0; i < Row.length; i++) {
+			Row[i] = LatinSquare[val][i];
+		}
+		
 		return Row;
 	}
 	public boolean isLatinSquare() {
 		boolean isLatinSquare = false;
 		
+		int[][] LS = getLatinSquare();
+		
+		//check for duplicates
+		for(int i = 0; i < LS.length; i++) {
+			if(hasDuplicates(getRow(i)) == true) return false;
+			if(hasDuplicates(getColumn(i)) == true) return false;
+		}
+		
+		int[] firstRow = getRow(0);
+		
+		for(int i = 0; i < LS[0].length; i++) {
+			if(hasAllValues(firstRow, getRow(i)) == false) return false;
+		}
+		
+		isLatinSquare = true;
+		
 		return isLatinSquare;
 	}
 	public boolean CointainsZero() {
+		
 		boolean ContainsZero = false;
 		
-		
-		
 		return ContainsZero;
+		
 	}
 	
 }
