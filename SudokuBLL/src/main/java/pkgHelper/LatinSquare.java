@@ -114,10 +114,18 @@ public class LatinSquare {
 		return isLatinSquare;
 	}
 	public boolean CointainsZero() {
+
+		int[][] LS = getLatinSquare();
 		
-		boolean ContainsZero = false;
+		for(int i = 0; i < LS.length; i++) {
+			for(int j = 0; j < LS[0].length; j++) {
+				if(LS[i][j] == 0) {
+					return true;
+				}
+			}
+		}
 		
-		return ContainsZero;
+		return false;
 		
 	}
 	
