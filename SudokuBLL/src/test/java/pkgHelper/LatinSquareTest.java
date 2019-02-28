@@ -118,5 +118,13 @@ public class LatinSquareTest {
 	public void get_Row_Test2() {
 		
 	}
+	@Test
+	public void isLatinSquare_Test1() {
+		
+	}
+	@Test
+	public void isLatinSquare_Test2() {
+		
+	}
 	
 }
