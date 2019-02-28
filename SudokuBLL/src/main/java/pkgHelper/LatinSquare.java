@@ -30,10 +30,12 @@ public class LatinSquare {
 		if(arr == null)
 			return false;
 		
-		Arrays.sort(arr);
+		int [] tempArr = arr.clone();
 		
-		for(int i = 0; i < arr.length-1; i++) {
-			if(arr[i] == arr[i+1]) {
+		Arrays.sort(tempArr);
+		
+		for(int i = 0; i < tempArr.length-1; i++) {
+			if(tempArr[i] == tempArr[i+1]) {
 				hasDuplicates = true;
 				break;
 			}
@@ -93,7 +95,6 @@ public class LatinSquare {
 		return Row;
 	}
 	public boolean isLatinSquare() {
-		boolean isLatinSquare = false;
 		
 		int[][] LS = getLatinSquare();
 		
@@ -109,9 +110,8 @@ public class LatinSquare {
 			if(hasAllValues(firstRow, getRow(i)) == false) return false;
 		}
 		
-		isLatinSquare = true;
+		return true;
 		
-		return isLatinSquare;
 	}
 	public boolean CointainsZero() {
 

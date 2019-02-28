@@ -43,6 +43,15 @@ public class LatinSquareTest {
 		
 	}
 	@Test
+	public void hasDuplicates_test5() {
+		
+		int[] arr = {4,7,7,2};
+		LatinSquare lq = new LatinSquare();
+		
+		assertArrayEquals(arr, new int[] {4,7,7,2});
+		
+	}
+	@Test
 	public void doesElementExist_Test1() {
 		int[] arr = {1,3,4,5,1};
 		int iValue = 3;
