@@ -103,28 +103,91 @@ public class LatinSquareTest {
 		assertFalse(lq.hasAllValues(arr1,arr2));
 	}
 	@Test
-	public void get_Column_Test1() {
+	public void getRow_Test1() {
+		
+		int[][] testLatinSquare = {{1,2,3},{2,3,1},{3,1,2}};
+		
+		LatinSquare lq = new LatinSquare(testLatinSquare);
+		
+		assertArrayEquals(lq.getRow(0), new int[] {1,2,3});
 		
 	}
 	@Test
-	public void get_Column_Test2() {
+	public void getRow_Test2() {
+		
+		int[][] testLatinSquare = {{4,2,3},{2,8,1},{3,1,2}};
+		
+		LatinSquare lq = new LatinSquare(testLatinSquare);
+		
+		assertArrayEquals(lq.getRow(1), new int[] {2,8,1});
 		
 	}
 	@Test
-	public void get_Row_Test1() {
+	public void getColumn_Test1() {
+		
+		int[][] testLatinSquare = {{1,2,3},{5,3,1},{3,1,2}};
+		
+		LatinSquare lq = new LatinSquare(testLatinSquare);
+		
+		assertArrayEquals(lq.getColumn(0), new int[] {1,5,3});
 		
 	}
 	@Test
-	public void get_Row_Test2() {
+	public void getColumn_Test2() {
+		
+		int[][] testLatinSquare = {{1,2,3},{2,3,1},{3,1,2}};
+		
+		LatinSquare lq = new LatinSquare(testLatinSquare);
+		
+		assertArrayEquals(lq.getRow(2), new int[] {3,1,2});
 		
 	}
 	@Test
 	public void isLatinSquare_Test1() {
 		
+		int[][] testLatinSquare = {{1,2,3},{2,3,1},{3,1,2}};
+		
+		LatinSquare lq = new LatinSquare(testLatinSquare);
+		
+		assertTrue(lq.isLatinSquare());
+		
 	}
 	@Test
 	public void isLatinSquare_Test2() {
 		
+		int[][] testLatinSquare = {{1,2,3},{2,3,1},{3,5,2}};
+		
+		LatinSquare lq = new LatinSquare(testLatinSquare);
+		
+		assertFalse(lq.isLatinSquare());
+		
+	}
+	@Test
+	public void containsZero_Test1() {
+		
+		int[][] testLatinSquare = {{1,2,3},{2,3,1},{3,5,2}};
+		
+		LatinSquare lq = new LatinSquare(testLatinSquare);
+		
+		assertFalse(lq.containsZero());
+	}
+	@Test
+	public void containsZero_Test2() {
+		
+		int[][] testLatinSquare = {{1,2,3},{0,3,1},{3,5,2}};
+		
+		LatinSquare lq = new LatinSquare(testLatinSquare);
+		
+		assertTrue(lq.containsZero());
+	}
+	@Test
+	public void containsZero_Test3() {
+		
+		int[][] testLatinSquare = new int[3][3];
+		
+		LatinSquare lq = new LatinSquare(testLatinSquare);
+		
+		assertTrue(lq.containsZero());
 	}
 	
 }

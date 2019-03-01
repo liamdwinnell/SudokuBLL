@@ -75,7 +75,8 @@ public class LatinSquare {
 	}
 	
 	public int[] getColumn(int val) {
-		int[][] LS = getLatinSquare();
+		int[][] LS = this.LatinSquare;
+		//int[][] LS = getLatinSquare();
 		int[] Column = new int[LS.length];
 		
 		for(int i = 0; i < Column.length; i++) {
@@ -85,7 +86,8 @@ public class LatinSquare {
 		return Column;
 	}
 	public int[] getRow(int val) {
-		int[][] LS = getLatinSquare();
+		int[][] LS = this.LatinSquare;
+		//int[][] LS = getLatinSquare();
 		int[] Row = new int[LS[val].length];
 		
 		for(int i = 0; i < Row.length; i++) {
@@ -96,7 +98,8 @@ public class LatinSquare {
 	}
 	public boolean isLatinSquare() {
 		
-		int[][] LS = getLatinSquare();
+		int[][] LS = this.LatinSquare;
+		//int[][] LS = getLatinSquare();
 		
 		//check for duplicates
 		for(int i = 0; i < LS.length; i++) {
@@ -113,9 +116,10 @@ public class LatinSquare {
 		return true;
 		
 	}
-	public boolean CointainsZero() {
+	public boolean containsZero() {
 
-		int[][] LS = getLatinSquare();
+		int[][] LS = this.LatinSquare;
+		//int[][] LS = getLatinSquare();
 		
 		for(int i = 0; i < LS.length; i++) {
 			for(int j = 0; j < LS[0].length; j++) {
