@@ -85,6 +85,7 @@ public class LatinSquare {
 		
 		return Column;
 	}
+	
 	public int[] getRow(int val) {
 		int[][] LS = this.LatinSquare;
 
@@ -96,6 +97,7 @@ public class LatinSquare {
 		
 		return Row;
 	}
+	
 	public boolean isLatinSquare() {
 		
 		int[][] LS = this.LatinSquare;
@@ -115,6 +117,7 @@ public class LatinSquare {
 		return true;
 		
 	}
+	
 	public boolean containsZero() {
 
 		int[][] LS = this.LatinSquare;
